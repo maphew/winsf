@@ -36,10 +36,12 @@ https://docs.microsoft.com/en-gb/windows/win32/api/shldisp/ne-shldisp-shellspeci
 '''
 import win32com.client
 import csv
+from os import path
 
 shapp = win32com.client.Dispatch("Shell.Application")
 
-csvfile = "special-folder-constants.csv"
+here = path.abspath(path.dirname(__file__))
+csvfile = path.join(here, "special-folder-constants.csv")
 data = tuple(csv.DictReader(open(csvfile)))
     # we wrap in a tuple so the rows are available all the time, and immutable
     # otherwise content of `data` can change in every call, e.g. early return
