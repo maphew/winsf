@@ -37,15 +37,14 @@ setup(
     keywords='windows special folders',  # Optional
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
     python_requires='>=3.6, <4',
-
     # If there are data files included in your packages that need to be
     # installed, specify them here.
-    #
     # If using Python 2.6 or earlier, then these have to be included in
     # MANIFEST.in as well.
     package_data={  # Optional
         'winfolders': ['special-folder-constants.csv'],
     },
+    install_requires=['pywin32']
 
     # entry_points={  # Optional
         # 'console_scripts': [
