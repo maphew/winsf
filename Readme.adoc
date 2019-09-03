@@ -1,0 +1,40 @@
+= Winfolders
+
+A simple module to get Windows user "special folders" (Desktop, Start Menu, Documents, ...) info
+
+    fpath(x)        full path for folder name `x`
+    description(x)  description for folder name `x`
+    names()         list all special folder names we know about
+    print_all()     display all SF names and paths
+
+Example output:
+
+    ----------------------------------------
+    Search:	startmenu
+    ----------------------------------------
+    Name:	STARTMENU
+    Path:	C:\Users\mattw\AppData\Roaming\Microsoft\Windows\Start Menu
+    Desc:	File system directory that contains Start menu items. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu.
+    ----------------------------------------
+
+This module is an alternative to the usual
+
+    objShell = win32com.client.Dispatch("WScript.Shell")
+    allmenu = objShell.SpecialFolders("AllUsersPrograms")
+
+...because "These special folders do not work in all language locales, a preferred
+method is to query the value from User Shell folders". So we do that using the
+integer IDs from "ShellSpecialFolderConstants Enumeration", published 4/12/2018.
+
+Additionally it turns out using Shell.Application returns more folders than
+Wscript.Shell, 38 vs 16.
+
+There's probably better or more complete ways to do this out there, but I didn't find something that fit my need of the moment (small in size, small enough for me to understand).
+
+== Sources
+
+- https://stackoverflow.com/questions/2063508/find-system-folder-locations-in-python
+- https://ss64.com/vb/special.html[WshShell.SpecialFolders] SS64.com
+- https://ss64.com/nt/shell-folders-vbs.txt[shell-folders-vbs.txt] SS64.com
+- https://docs.microsoft.com/en-gb/windows/win32/api/shldisp/ne-shldisp-shellspecialfolderconstants#constants[ShellSpecialFolderConstants Enumeration] MSDN
+- https://github.com/tjguk/winshell[Winshell] - Tim Golden
