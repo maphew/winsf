@@ -1,6 +1,6 @@
 = Winfolders
 
-A simple module to get Windows user "special folders" (Desktop, Start Menu, Documents, ...) info
+A simple module to get Windows user "special folders" info (Desktop, Start Menu, Documents, ...)
 
     fpath(x)        full path for folder name `x`
     description(x)  description for folder name `x`
@@ -30,6 +30,35 @@ Additionally it turns out using Shell.Application returns more folders than
 Wscript.Shell, 38 vs 16.
 
 There's probably better or more complete ways to do this out there, but I didn't find something that fit my need of the moment (small in size, small enough for me to understand).
+
+== Install
+
+    pip install https://github.com/maphew/winfolders/archive/master.zip
+    
+== Usage
+
+    >>> import winfolders as winsf
+    >>> winsf.names()
+    ['DESKTOP','PROGRAMS',...,'ALTSTARTUP',...,'SYSTEMx86','PROGRAMFILESx86']
+
+    >>> winsf.fpath('altstartup')
+    'C:\\Users\\matt\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
+    
+    >>> winsf.description('altstartup')
+    "File system directory that corresponds to the user's non-localized Startup program group."
+
+    >>> winsf.print_all() # Virtual folders begin with `::`
+    Name                 Path
+    DESKTOP              C:\Users\matt\Desktop
+    PROGRAMS             C:\Users\matt\AppData\Roaming\Microsoft\Windows\Start Menu\Programs
+    CONTROLS             ::{26EE0668-A00A-44D7-9371-BEB064C98683}\0
+    ...
+    PROFILE              C:\Users\matt
+    SYSTEMx86            C:\Windows\SysWOW64
+    PROGRAMFILESx86      C:\Users\matt\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools
+
+*** Oh look at that, a bug! `PROGRAMFILESx86` is returning invalid description. It's correct in the csv. Hmmm.
+
 
 == Sources
 
