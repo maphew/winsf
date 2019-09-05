@@ -43,7 +43,7 @@ shapp = win32com.client.Dispatch("Shell.Application")
 try:
     here = path.abspath(path.dirname(__file__))
 except NameError:
-    here = r"C:\Users\mattw\code\utils\winfolders\winsf"
+    here = r"C:\Users\mattw\code\utils\winsf\winsf"
 
 csvfile = path.join(here, "special-folder-constants.csv")
 data = tuple(csv.DictReader(open(csvfile)))
@@ -85,8 +85,12 @@ def print_all(data=data):
         print(f'{name:<20} {path}')
 
 def hunter(start=0, stop=50):
-    for i in range(start, stop):
-        ret = shapp.namespace(i).self.path
+    for i in range(start, stop+1):
+        try:
+            sf = shapp.namespace(i).self
+            ret = i, sf.name, sf.path
+        except AttributeError:
+            ret = i, None, None
         print(ret)
 
 
