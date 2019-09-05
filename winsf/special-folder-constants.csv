@@ -1,39 +1,39 @@
-"UserFolder","ID","Description"
-"DESKTOP",0,"Windows desktop—the virtual folder that is the root of the namespace."
-"PROGRAMS",2,"File system directory that contains the user's program groups (which are also file system directories). A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs."
-"CONTROLS",3,"Virtual folder that contains icons for the Control Panel applications."
-"PRINTERS",4,"Virtual folder that contains installed printers."
-"PERSONAL",5,"File system directory that serves as a common repository for a user's documents. A typical path is C:\Users\username\Documents."
-"FAVORITES",6,"File system directory that serves as a common repository for the user's favorite URLs. A typical path is C:\Documents and Settings\username\Favorites."
-"STARTUP",7,"File system directory that corresponds to the user's Startup program group. The system starts these programs whenever any user first logs into their profile after a reboot. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\StartUp."
-"RECENT",8,"File system directory that contains the user's most recently used documents. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Recent."
-"SENDTO",9,"File system directory that contains Send To menu items. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\SendTo."
-"BITBUCKET",10,"Virtual folder that contains the objects in the user's Recycle Bin."
-"STARTMENU",11,"File system directory that contains Start menu items. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu."
-"DESKTOPDIRECTORY",16,"File system directory used to physically store the file objects that are displayed on the desktop. It is not to be confused with the desktop folder itself, which is a virtual folder. A typical path is C:\Documents and Settings\username\Desktop."
-"DRIVES",17,"My Computer—the virtual folder that contains everything on the local computer: storage devices, printers, and Control Panel. This folder can also contain mapped network drives."
-"NETWORK",18,"Network Neighborhood—the virtual folder that represents the root of the network namespace hierarchy."
-"NETHOOD",19,"A file system folder that contains any link objects in the My Network Places virtual folder. It is not the same as ssfNETWORK, which represents the network namespace root. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Network Shortcuts."
-"FONTS",20,"Virtual folder that contains installed fonts. A typical path is C:\Windows\Fonts."
-"TEMPLATES",21,"File system directory that serves as a common repository for document templates."
-"COMMONSTARTMENU",22,"File system directory that contains the programs and folders that appear on the Start menu for all users. A typical path is C:\Documents and Settings\All Users\Start Menu. Valid only for Windows NT systems."
-"COMMONPROGRAMS",23,"File system directory that contains the directories for the common program groups that appear on the Start menu for all users. A typical path is C:\Documents and Settings\All Users\Start Menu\Programs. Valid only for Windows NT systems."
-"COMMONSTARTUP",24,"File system directory that contains the programs that appear in the Startup folder for all users. A typical path is C:\Documents and Settings\All Users\Microsoft\Windows\Start Menu\Programs\StartUp. Valid only for Windows NT systems."
-"COMMONDESKTOPDIR",25,"File system directory that contains files and folders that appear on the desktop for all users. A typical path is C:\Documents and Settings\All Users\Desktop. Valid only for Windows NT systems."
-"APPDATA",26,"Version 4.71. File system directory that serves as a common repository for application-specific data. A typical path is C:\Documents and Settings\username\Application Data."
-"PRINTHOOD",27,"File system directory that contains any link objects in the Printers virtual folder. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Printer Shortcuts."
-"LOCALAPPDATA",28,"Version 5.0. File system directory that serves as a data repository for local (non-roaming) applications. A typical path is C:\Users\username\AppData\Local."
-"ALTSTARTUP",29,"File system directory that corresponds to the user's non-localized Startup program group."
-"COMMONALTSTARTUP",30,"File system directory that corresponds to the non-localized Startup program group for all users. Valid only for Windows NT systems."
-"COMMONFAVORITES",31,"File system directory that serves as a common repository for the favorite URLs shared by all users. Valid only for Windows NT systems."
-"INTERNETCACHE",32,"File system directory that serves as a common repository for temporary Internet files. A typical path is C:\Users\username\AppData\Local\Microsoft\Windows\Temporary Internet Files."
-"COOKIES",33,"File system directory that serves as a common repository for Internet cookies. A typical path is C:\Documents and Settings\username\Application Data\Microsoft\Windows\Cookies."
-"HISTORY",34,"File system directory that serves as a common repository for Internet history items."
-"COMMONAPPDATA",35,"Version 5.0. Application data for all users. A typical path is C:\Documents and Settings\All Users\Application Data."
-"WINDOWS",36,"Version 5.0. Windows directory. This corresponds to the %windir% or %SystemRoot% environment variables. A typical path is C:\Windows."
-"SYSTEM",37,"Version 5.0. The System folder. A typical path is C:\Windows\System32."
-"PROGRAMFILES",38,"Version 5.0. Program Files folder. A typical path is C:\Program Files."
-"MYPICTURES",39,"My Pictures folder. A typical path is C:\Users\username\Pictures."
-"PROFILE",40,"Version 5.0. User's profile folder."
-"SYSTEMx86",41,"Version 5.0. System folder. A typical path is C:\Windows\System32, or C:\Windows\Syswow32 on a 64-bit computer."
-"PROGRAMFILESx86",48,"Version 6.0. Program Files folder. A typical path is C:\Program Files, or C:\Program Files (X86) on a 64-bit computer."
+ID,Sfname,Description
+0,DESKTOP,Windows desktop - the virtual folder that is the root of the namespace.
+2,PROGRAMS,File system directory that contains the user's program groups (which are also file system directories). A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs.
+3,CONTROLS,Virtual folder that contains icons for the Control Panel applications.
+4,PRINTERS,Virtual folder that contains installed printers.
+5,PERSONAL,File system directory that serves as a common repository for a user's documents. A typical path is C:\Users\username\Documents.
+6,FAVORITES,File system directory that serves as a common repository for the user's favorite URLs. A typical path is C:\Documents and Settings\username\Favorites.
+7,STARTUP,File system directory that corresponds to the user's Startup program group. The system starts these programs whenever any user first logs into their profile after a reboot. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\StartUp.
+8,RECENT,File system directory that contains the user's most recently used documents. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Recent.
+9,SENDTO,File system directory that contains Send To menu items. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\SendTo.
+10,BITBUCKET,Virtual folder that contains the objects in the user's Recycle Bin.
+11,STARTMENU,File system directory that contains Start menu items. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu.
+16,DESKTOPDIRECTORY,"File system directory used to physically store the file objects that are displayed on the desktop. It is not to be confused with the desktop folder itself, which is a virtual folder. A typical path is C:\Documents and Settings\username\Desktop."
+17,DRIVES,"My Computer - the virtual folder that contains everything on the local computer: storage devices, printers, and Control Panel. This folder can also contain mapped network drives."
+18,NETWORK,Network Neighborhood - the virtual folder that represents the root of the network namespace hierarchy.
+19,NETHOOD,"A file system folder that contains any link objects in the My Network Places virtual folder. It is not the same as ssfNETWORK, which represents the network namespace root. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Network Shortcuts."
+20,FONTS,Virtual folder that contains installed fonts. A typical path is C:\Windows\Fonts.
+21,TEMPLATES,File system directory that serves as a common repository for document templates.
+22,COMMONSTARTMENU,File system directory that contains the programs and folders that appear on the Start menu for all users. A typical path is C:\Documents and Settings\All Users\Start Menu. Valid only for Windows NT systems.
+23,COMMONPROGRAMS,File system directory that contains the directories for the common program groups that appear on the Start menu for all users. A typical path is C:\Documents and Settings\All Users\Start Menu\Programs. Valid only for Windows NT systems.
+24,COMMONSTARTUP,File system directory that contains the programs that appear in the Startup folder for all users. A typical path is C:\Documents and Settings\All Users\Microsoft\Windows\Start Menu\Programs\StartUp. Valid only for Windows NT systems.
+25,COMMONDESKTOPDIR,File system directory that contains files and folders that appear on the desktop for all users. A typical path is C:\Documents and Settings\All Users\Desktop. Valid only for Windows NT systems.
+26,APPDATA,Version 4.71. File system directory that serves as a common repository for application-specific data. A typical path is C:\Documents and Settings\username\Application Data.
+27,PRINTHOOD,File system directory that contains any link objects in the Printers virtual folder. A typical path is C:\Users\username\AppData\Roaming\Microsoft\Windows\Printer Shortcuts.
+28,LOCALAPPDATA,Version 5.0. File system directory that serves as a data repository for local (non-roaming) applications. A typical path is C:\Users\username\AppData\Local.
+29,ALTSTARTUP,File system directory that corresponds to the user's non-localized Startup program group.
+30,COMMONALTSTARTUP,File system directory that corresponds to the non-localized Startup program group for all users. Valid only for Windows NT systems.
+31,COMMONFAVORITES,File system directory that serves as a common repository for the favorite URLs shared by all users. Valid only for Windows NT systems.
+32,INTERNETCACHE,File system directory that serves as a common repository for temporary Internet files. A typical path is C:\Users\username\AppData\Local\Microsoft\Windows\Temporary Internet Files.
+33,COOKIES,File system directory that serves as a common repository for Internet cookies. A typical path is C:\Documents and Settings\username\Application Data\Microsoft\Windows\Cookies.
+34,HISTORY,File system directory that serves as a common repository for Internet history items.
+35,COMMONAPPDATA,Version 5.0. Application data for all users. A typical path is C:\Documents and Settings\All Users\Application Data.
+36,WINDOWS,Version 5.0. Windows directory. This corresponds to the %windir% or %SystemRoot% environment variables. A typical path is C:\Windows.
+37,SYSTEM,Version 5.0. The System folder. A typical path is C:\Windows\System32.
+38,PROGRAMFILES,Version 5.0. Program Files folder. A typical path is C:\Program Files.
+39,MYPICTURES,My Pictures folder. A typical path is C:\Users\username\Pictures.
+40,PROFILE,Version 5.0. User's profile folder.
+41,SYSTEMx86,"Version 5.0. System folder. A typical path is C:\Windows\System32, or C:\Windows\Syswow32 on a 64-bit computer."
+48,PROGRAMFILESx86,"Version 6.0. Program Files folder. A typical path is C:\Program Files, or C:\Program Files (X86) on a 64-bit computer."

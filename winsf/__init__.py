@@ -55,34 +55,35 @@ def names(data=data):
     '''Return list of possible user special folder names'''
     names = []
     for row in data:
-        names.append(row["UserFolder"])
+        names.append(row["Sfname"])
     return names
 
 def description(name):
     '''Return description for `name` as string'''
     for row in data:
-        if name.upper() == row["UserFolder"]:
+        if name.upper() == row["Sfname"]:
             return row["Description"]
 
 def get_sfname(name):
     '''Return Windows special folder for `name` as string or None'''
     for row in data:
-        if name.upper() == row["UserFolder"]:
-            return row["UserFolder"]
+        if name.upper() == row["Sfname"]:
+            return row["Sfname"]
 
 def fpath(name):
     '''Return full path for `name`. Virtual folders begin with `::`'''
     for row in data:
-        if name.upper() == row["UserFolder"]:
+        if name.upper() == row["Sfname"]:
             return shapp.namespace(int(row["ID"])).self.path
 
 def print_all(data=data):
     '''Display all user special folder names and paths'''
     print('{:<20} {}'.format('Name', 'Path'))
     for row in data:
-        name = row["UserFolder"]
+        id = row["ID"]
+        name = row["Sfname"]
         path = shapp.namespace(int(row["ID"])).self.path
-        print(f'{name:<20} {path}')
+        print(f'{id:<2} {name:<20} {path}')
 
 def hunter(start=0, stop=50):
     for i in range(start, stop+1):
