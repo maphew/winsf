@@ -14,13 +14,13 @@ with open(path.join(here, 'README.adoc'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='winfolders',  # Required
+    name='winsf',  # Required
     version='0.0.1',  # Required
     description='Get info about Windows "special folders"',  # Optional
     long_description=long_description,  # Optional
     # https://packaging.python.org/specifications/core-metadata/#description-content-type-optional
     long_description_content_type='text/markdown',  # Optional (see note above)
-    url='https://github.com/maphew/winfolders',  # Optional
+    url='https://github.com/maphew/winsf',  # Optional
     author='Matt Wilkie',  # Optional
     author_email='maphew@gmail.com',  # Optional
     classifiers=[
@@ -42,7 +42,7 @@ setup(
     # If using Python 2.6 or earlier, then these have to be included in
     # MANIFEST.in as well.
     package_data={  # Optional
-        'winfolders': ['special-folder-constants.csv'],
+        'winsf': ['special-folder-constants.csv'],
     },
     install_requires=['pywin32']
 
