@@ -40,7 +40,11 @@ from os import path
 
 shapp = win32com.client.Dispatch("Shell.Application")
 
-here = path.abspath(path.dirname(__file__))
+try:
+    here = path.abspath(path.dirname(__file__))
+except NameError:
+    here = r"C:\Users\mattw\code\utils\winfolders\winsf"
+
 csvfile = path.join(here, "special-folder-constants.csv")
 data = tuple(csv.DictReader(open(csvfile)))
     # we wrap in a tuple so the rows are available all the time, and immutable
@@ -79,6 +83,12 @@ def print_all(data=data):
         name = row["UserFolder"]
         path = shapp.namespace(int(row["ID"])).self.path
         print(f'{name:<20} {path}')
+
+def hunter(start=0, stop=50):
+    for i in range(start, stop):
+        ret = shapp.namespace(i).self.path
+        print(ret)
+
 
 if __name__ == "__main__":
     search = 'startmenu'
