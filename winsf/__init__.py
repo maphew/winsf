@@ -91,8 +91,7 @@ def hunter(start=0, stop=50):
             ret = i, None, None
         print(ret)
 
-
-if __name__ == "__main__":
+def demo():
     search = 'startmenu'
     sfname = get_sfname(search)
     path = fpath(search)
@@ -105,8 +104,9 @@ if __name__ == "__main__":
     print("Desc:\t{}".format(desc))
     print("-"*40)
 
-    # print("-"*40)
-    # print(names())
+import knownfolders as kf
+kf.get = kf.get_known_folder_path
 
-    # print("-"*40)
-    # print_all()
+if __name__ == "__main__":
+    demo()
+    print(kf.get(kf.FOLDERID.StartMenu))
