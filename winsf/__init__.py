@@ -40,10 +40,7 @@ from os import path
 
 shapp = win32com.client.Dispatch("Shell.Application")
 
-try:
-    here = path.abspath(path.dirname(__file__))
-except NameError:
-    here = r"C:\Users\mattw\code\utils\winsf\winsf"
+here = path.abspath(path.dirname(__file__))
 
 csvfile = path.join(here, "special-folder-constants.csv")
 data = tuple(csv.DictReader(open(csvfile)))
