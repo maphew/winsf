@@ -208,6 +208,14 @@ FOLDERID = SimpleNamespace(
     SkyDrivePictures=FOLDERID_SkyDrivePictures,
 )
 
+table = {}
+for fid in dir(FOLDERID):
+    try:
+        path = get_known_folder_path(getattr(FOLDERID, fid))
+        table[fid] = path
+    except OSError:
+        table[fid] = None
+
 if __name__ == '__main__':
     for fid in dir(FOLDERID):
         try:
