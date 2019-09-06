@@ -36,4 +36,4 @@ ID,Sfname,Description
 39,MYPICTURES,My Pictures folder. A typical path is C:\Users\username\Pictures.
 40,PROFILE,Version 5.0. User's profile folder.
 41,SYSTEMx86,"Version 5.0. System folder. A typical path is C:\Windows\System32, or C:\Windows\Syswow32 on a 64-bit computer."
-48,PROGRAMFILESx86,"Version 6.0. Program Files folder. A typical path is C:\Program Files, or C:\Program Files (X86) on a 64-bit computer."
+42,PROGRAMFILESx86,"Version 6.0. Program Files folder. A typical path is C:\Program Files, or C:\Program Files (X86) on a 64-bit computer."
