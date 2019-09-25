@@ -1,5 +1,20 @@
 ''' Lookup Windows special or known folders using ctypes.
-    From Eryk Sun, https://stackoverflow.com/a/33181421/14420
+
+Adapted from Eryk Sun, https://stackoverflow.com/a/33181421/14420
+
+Example:
+
+    from knownfolders import folders as kf
+    print('Profile:  ', kf.Profile)
+    print('Desktop:  ', kf.Desktop)
+    print('Programs: ', kf.Programs)
+
+Print all known folder names and paths:
+
+    from knownfolders import table as kf_table
+    for k,v in kf_table.items():
+        print("{:<22}: {}".format(k,v))
+
 '''
 import ctypes
 from ctypes import wintypes
@@ -208,21 +223,22 @@ FOLDERID = SimpleNamespace(
     SkyDrivePictures=FOLDERID_SkyDrivePictures,
 )
 
-table = {}
-for fid in dir(FOLDERID):
-    try:
-        path = get_known_folder_path(getattr(FOLDERID, fid))
-        table[fid] = path
-    except OSError:
-        table[fid] = None
+def make_table():
+    '''Return lookup table of 'KnownFoldername':'Path' '''
+    table = {}
+    for fid in dir(FOLDERID):
+        try:
+            path = get_known_folder_path(getattr(FOLDERID, fid))
+            table[fid] = path
+        except OSError:
+            table[fid] = None
+    return table
 
+table = make_table()
 folders = SimpleNamespace(**table)
 
 
 if __name__ == '__main__':
-    for fid in dir(FOLDERID):
-        try:
-            path = get_known_folder_path(getattr(FOLDERID, fid))
-            print("%s = %s" % (fid, path))
-        except OSError:
-            pass
+    # Print all known folder names and paths
+    for k,v in table.items():
+        print("{:<22}: {}".format(k,v))
