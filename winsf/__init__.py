@@ -104,10 +104,13 @@ def demo():
     print("Desc:\t{}".format(desc))
     print("-"*40)
 
-import knownfolders as kf
-kf.get = kf.get_known_folder_path
+from knownfolders import folders as kf
+# kf.get = kf.get_known_folder_path
 
 if __name__ == "__main__":
     demo()
-    print(kf.get(kf.FOLDERID.StartMenu))
-    print(kf.table['StartMenu'])
+    # print(kf.get(kf.FOLDERID.StartMenu))
+    # print(kf.table['StartMenu'])
+    print('Desktop: ', kf.Desktop)
+    print('Programs: ', kf.Programs)
+    print('Profile: ', kf.Profile)

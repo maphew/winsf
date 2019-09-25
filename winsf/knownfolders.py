@@ -216,6 +216,9 @@ for fid in dir(FOLDERID):
     except OSError:
         table[fid] = None
 
+folders = SimpleNamespace(**table)
+
+
 if __name__ == '__main__':
     for fid in dir(FOLDERID):
         try:
